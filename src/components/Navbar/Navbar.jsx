@@ -29,7 +29,12 @@ const Navbar = () => {
               Browse
             </Link>
           </li>
-          
+          <li className="nav-item">
+            <Link to="/create-skill" className="nav-link">
+              Create Skill Card
+            </Link>
+          </li>
+
           {user ? (
             <>
               <li className="nav-item">
