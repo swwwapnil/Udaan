@@ -1,38 +1,25 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { jwtDecode } from 'jwt-decode';
+// src/contexts/AuthContext.js
+import React, { createContext, useContext, useState } from 'react';
+import auth from '../services/auth'; // your axios wrapper
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
-  const [token, setToken] = useState(localStorage.getItem('token'));
-  const navigate = useNavigate();
+  const [authToken, setAuthToken] = useState(() => localStorage.getItem('token'));
 
-  useEffect(() => {
-    if (token) {
-      const decoded = jwtDecode(token);
-      setUser(decoded);
-      localStorage.setItem('token', token);
-    } else {
-      logout();
-    }
-  }, [token]);
-
-  const login = async (token) => {
-    setToken(token);
-    navigate('/dashboard');
+  const login = async (credentials) => {
+    const data = await auth.login(credentials);
+    setAuthToken(data.token);
+    return data;
   };
 
   const logout = () => {
-    setToken(null);
-    setUser(null);
-    localStorage.removeItem('token');
-    navigate('/login');
+    auth.logout();
+    setAuthToken(null);
   };
 
   return (
-    <AuthContext.Provider value={{ user, token, login, logout }}>
+    <AuthContext.Provider value={{ authToken, login, logout }}>
       {children}
     </AuthContext.Provider>
   );

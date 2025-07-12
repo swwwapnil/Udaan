@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import './Navbar.css';
 
+
 const Navbar = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
