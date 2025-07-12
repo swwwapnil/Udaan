@@ -5,12 +5,19 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="home-container">
-      <header className="hero-section">
-        <h1>Skill Swap Platform</h1>
-        <p>Exchange your skills with others in your community</p>
-        <div className="cta-buttons">
-          <Link to="/register" className="btn btn-primary">Get Started</Link>
-          <Link to="/browse" className="btn btn-secondary">Browse Skills</Link>
+      <header className="hero-section gradient-bg">
+        <div className="hero-content">
+          <div className="hero-text">
+            <h1>Swap Skills. Grow Together.</h1>
+            <p>Discover people who can teach you something new — and share your own talents.</p>
+            <div className="cta-buttons">
+              <Link to="/register" className="btn btn-primary">Get Started</Link>
+              <Link to="/browse" className="btn btn-secondary">Browse skills</Link>
+            </div>
+          </div>
+          <div className="hero-graphic">
+            <img src="/Homeeepage.png" alt="Skill exchange illustration" />
+          </div>
         </div>
       </header>
 
@@ -18,33 +25,19 @@ const Home = () => {
         <h2>How It Works</h2>
         <div className="features-grid">
           <div className="feature-card">
-            <div className="feature-icon">1</div>
-            <h3>List Your Skills</h3>
-            <p>Add the skills you're willing to teach or share with others.</p>
+            <div className="feature-icon">🔧</div>
+            <h3>Create your Skill Profile</h3>
+            <p>Showcase your skills and expertise to attract swaps.</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">2</div>
-            <h3>Find Skills You Need</h3>
-            <p>Browse through skills offered by other community members.</p>
+            <div className="feature-icon">🔍</div>
+            <h3>Search and Request Swaps</h3>
+            <p>Explore and connect with skill partners in your community.</p>
           </div>
           <div className="feature-card">
-            <div className="feature-icon">3</div>
-            <h3>Swap & Learn</h3>
-            <p>Connect and exchange skills with others in your area.</p>
-          </div>
-        </div>
-      </section>
-
-      <section className="testimonials-section">
-        <h2>What Our Users Say</h2>
-        <div className="testimonials-grid">
-          <div className="testimonial-card">
-            <p>"I learned photography in exchange for teaching web development. Amazing platform!"</p>
-            <p className="author">- Sarah, Designer</p>
-          </div>
-          <div className="testimonial-card">
-            <p>"Found someone to help me with Spanish while I taught them guitar. Perfect trade!"</p>
-            <p className="author">- Mike, Musician</p>
+            <div className="feature-icon">🤝</div>
+            <h3>Meet, Swap & Review</h3>
+            <p>Collaborate, learn, and leave feedback after each swap.</p>
           </div>
         </div>
       </section>
