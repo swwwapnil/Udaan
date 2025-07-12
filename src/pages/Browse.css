@@ -1,3 +1,4 @@
+/* Container setup */
 .browse-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,6 +6,7 @@
   font-family: 'Segoe UI', sans-serif;
 }
 
+/* Header / Title block */
 .browse-header {
   text-align: center;
   background: linear-gradient(135deg, #c7d2fe, #e9d5ff);
@@ -25,95 +27,115 @@
   color: #374151;
 }
 
-.search-filter {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.search-input,
-.category-filter {
-  padding: 12px 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  font-size: 1rem;
-  width: 300px;
-}
-
+/* Card layout */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
 
+/* Card appearance */
 .skill-card {
   padding: 25px;
-  border-radius: 16px;
-  background-color: white;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
 }
 
 .skill-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Top section of card: Avatar + Name */
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  object-fit: cover;
 }
 
 .skill-card h3 {
-  margin-bottom: 10px;
-  color: #4f46e5;
+  margin: 0;
   font-size: 1.3rem;
+  color: #1f2937;
 }
 
-.category {
-  font-weight: bold;
-  color: #6b7280;
-  margin-bottom: 15px;
-}
-
-.description {
-  margin-bottom: 20px;
-  color: #4b5563;
-}
-
-.user-info {
-  margin-bottom: 20px;
-  padding-top: 15px;
-  border-top: 1px solid #e5e7eb;
-}
-
-.user-info p {
-  margin-bottom: 5px;
+.meta {
   font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Tags section */
+.tag-section {
+  width: 100%;
+}
+
+.tag-title {
+  margin-bottom: 6px;
+  font-weight: 600;
   color: #374151;
 }
 
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Different tag types */
+.tag-offered {
+  background-color: #e0e7ff;
+  color: #3b82f6;
+}
+
+.tag-wanted {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+/* Request button */
 .request-btn {
   width: 100%;
   padding: 12px;
-  background-color: #4f46e5;
+  background-color: #6366f1;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   font-weight: bold;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .request-btn:hover {
-  background-color: #4338ca;
-  transform: scale(1.03);
+  background-color: #4f46e5;
+  transform: scale(1.02);
 }
 
-/* Responsive */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  .search-filter {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .browse-header h1 {
     font-size: 2rem;
   }
