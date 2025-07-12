@@ -9,7 +9,7 @@ import './App.css';
 import Home from './pages/Home';
 import Browse from './pages/Browse';
 import Login from './pages/Login';
-
+import Register from './pages/register';
 import Dashboard from './pages/Dashboard';
 
 
@@ -28,7 +28,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/browse" element={<Browse />} />
               <Route path="/login" element={<Login />} />
-              
+              <Route path="/register" element={<Register />} />
+
 
               {/* Protected Routes */}
               <Route element={<PrivateRoute />}>
