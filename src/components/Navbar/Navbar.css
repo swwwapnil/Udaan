@@ -55,6 +55,13 @@
   transform: translateY(-2px);
 }
 
+.logout-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-family: inherit;
+}
+
 @media screen and (max-width: 768px) {
   .nav-menu {
     display: none;
