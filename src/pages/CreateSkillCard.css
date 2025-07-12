@@ -1,0 +1,115 @@
+.create-skill-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.create-skill-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #2e2e2e;
+}
+
+.create-skill-header p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.form-section label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-section input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.skills-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skill-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: #f1f3ff;
+  color: #4a6fa5;
+  font-weight: 500;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-chip span {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+input[type='text'].skill-input {
+  width: calc(100% - 60px);
+  display: inline-block;
+}
+
+.add-skill-btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background-color: #e0e8ff;
+  font-weight: bold;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.privacy-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.privacy-toggle input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #4a6fa5;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #4a6fa5;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #3a5a8a;
+}
