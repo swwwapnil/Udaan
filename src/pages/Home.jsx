@@ -39,6 +39,21 @@ const Home = () => {
             <h3>Meet, Swap & Review</h3>
             <p>Collaborate, learn, and leave feedback after each swap.</p>
           </div>
+          <div className="feature-card">
+            <div className="feature-icon">🔒</div>
+            <h3>Private Profiles</h3>
+            <p>Keep your profile visible only when you're ready to swap.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">⭐</div>
+            <h3>Rate & Review</h3>
+            <p>Leave feedback and ratings after each swap session.</p>
+          </div>
+          <div className="feature-card">
+            <div className="feature-icon">🗑️</div>
+            <h3>Withdraw Requests</h3>
+            <p>Delete pending swap requests if you change your mind.</p>
+          </div>
         </div>
       </section>
     </div>

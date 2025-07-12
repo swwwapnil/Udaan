@@ -1,0 +1,142 @@
+/* Container setup */
+.browse-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header / Title block */
+.browse-header {
+  text-align: center;
+  background: linear-gradient(135deg, #c7d2fe, #e9d5ff);
+  padding: 50px 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  color: #1f2937;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.browse-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.browse-header p {
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+/* Card layout */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Card appearance */
+.skill-card {
+  padding: 25px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Top section of card: Avatar + Name */
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #f3f4f6;
+  object-fit: cover;
+}
+
+.skill-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #1f2937;
+}
+
+.meta {
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+/* Tags section */
+.tag-section {
+  width: 100%;
+}
+
+.tag-title {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Different tag types */
+.tag-offered {
+  background-color: #e0e7ff;
+  color: #3b82f6;
+}
+
+.tag-wanted {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+/* Request button */
+.request-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.request-btn:hover {
+  background-color: #4f46e5;
+  transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .browse-header h1 {
+    font-size: 2rem;
+  }
+}
